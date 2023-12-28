@@ -1,3 +1,8 @@
+<?php 
+  session_start();
+
+?>
+
 <html>
 
 <head>
@@ -46,8 +51,14 @@
               if ($autentificado === 'nao') {
               ?>
                 <p class="text-danger">Erro, Usuário ou senha inválidos!</p>
-              <? }?>
-
+              <? }else if($autentificado === 'invalido'){ ?>
+                
+                <p class="text-danger">
+                  Erro, é necessário realizar o login para acessar a página desejada
+                </p>
+              <?php 
+              }
+                ?>
 
               <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
             </form>

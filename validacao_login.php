@@ -8,6 +8,10 @@
 </head>
 <?php
 
+session_start();
+
+
+
 // Banco de dados do sistem
 $usuariosApp = array(
     array('email' => 'luisafernanda@gmail.com', 'senha' => '123456'),
@@ -25,6 +29,14 @@ foreach ($usuariosApp as $usuarioApp) {
         $usuarioAutentificado = true;
     }
 }
+
+if ($usuarioAutentificado) {
+    $_SESSION['autentificado'] = 'sim';
+} else {
+    $_SESSION['autentificado'] = 'nao';
+    header('Location: index.php?autentificado=invalido');
+}
+
 ?>
 
 <body>
