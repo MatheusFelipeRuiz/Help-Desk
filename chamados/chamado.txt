@@ -1,3 +1,6 @@
 {"titulo":"Javascript \u00e9 bom?","categoria":"Software","descricao":"13222222222222222222222222222222222"}
 {"titulo":"Javascript \u00e9 bom?","categoria":"Impressora","descricao":"saaaaaaaaaaaaaaad"}
 {"titulo":"Javascript \u00e9 bom?","categoria":"Impressora","descricao":"asssssssd"}
+{"titulo":"Testes de Typescript","categoria":"Software","descricao":"Testes com Typescript"}
+{"titulo":"Problema ao realizar o login de usu\u00e1rio","categoria":"Cria\u00e7\u00e3o Usu\u00e1rio","descricao":"TIve um problema ao tentar fazer o login com meu usu\u00e1rio e senha que tenho, poderiam me confirmar se o acesso est\u00e1 funcionando normalmente ou se foi modificado alguma informa\u00e7\u00e3o?"}
+{"titulo":"Wifi n\u00e3o pega","categoria":"Rede","descricao":"Meu wifi n\u00e3o pega, pe\u00e7o por favor que tentem ver a respeito desse caso. Anteriormente, uma pessoa da empresa havia dito '\u00c9 necess\u00e1rio estar realizando a troca de alguns cabos para que ele volte a funcionar' e eu fiz isso, mas ainda assim n\u00e3o est\u00e1 funcionando."}

@@ -8,8 +8,7 @@
         $conteudoArquivo = 'chamado.txt';
         $caminhoArquivoLeitura  = $diretorio . '/' . $conteudoArquivo;
 
-
-        fclose($arquivo);
+        
         if(!file_exists($diretorio)){
             mkdir($diretorio);
             $caminhoAbsoluto = $diretorio . '/' . $conteudoArquivo;
