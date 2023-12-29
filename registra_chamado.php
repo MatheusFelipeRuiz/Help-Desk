@@ -1,8 +1,10 @@
 <pre>
     <?php
+        session_start();
         $titulo = $_POST['titulo'];
         $categoria = $_POST['categoria'];
         $descricao = $_POST['descricao'];
+        $idUsuario = $_SESSION['id_usuario'];
 
         $diretorio = 'chamados';
         $conteudoArquivo = 'chamado.txt';
@@ -14,7 +16,7 @@
             $caminhoAbsoluto = $diretorio . '/' . $conteudoArquivo;
             $arquivo = fopen($caminhoAbsoluto, 'a');
             
-            $objeto = array('titulo' => "$titulo", 'categoria' => "$categoria", 'descricao' => "$descricao");
+            $objeto = array('idusuario' => "$idUsuario",'titulo' => "$titulo", 'categoria' => "$categoria", 'descricao' => "$descricao");
             $JSON = json_encode($objeto) . PHP_EOL;
             
             fwrite($arquivo,$JSON);
@@ -23,7 +25,7 @@
             $caminhoAbsoluto = $diretorio . '/' . $conteudoArquivo;
             $arquivo = fopen($caminhoAbsoluto, 'a');
             
-            $objeto = array('titulo' => "$titulo", 'categoria' => "$categoria", 'descricao' => "$descricao");
+            $objeto = array('idusuario' => "$idUsuario",'titulo' => "$titulo", 'categoria' => "$categoria", 'descricao' => "$descricao");
             $JSON = json_encode($objeto) . PHP_EOL;
 
             fwrite($arquivo,$JSON);

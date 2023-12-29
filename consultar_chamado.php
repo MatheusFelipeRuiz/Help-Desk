@@ -4,7 +4,6 @@ require_once 'validador_acesso.php';
 
 <?php
 $arquivo = fopen('chamados/chamado.txt', 'r');
-
 $listaChamados = [];
 while (!feof($arquivo)) {
   if (feof($arquivo)) {
@@ -54,10 +53,13 @@ fclose($arquivo)
           <div class="card-body">
             <?php
             foreach ($listaChamados as $chamado) {
+              if($_SESSION['permissao_usuario'] !== 1 && ((int)$chamado->idusuario) !==  $_SESSION['id_usuario']){
+                continue;
+              }
             ?>
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title"> <?php echo $chamado->titulo;  ?></h5>
+                  <h5 class="card-title"> <strong><?php echo $chamado->titulo;  ?></strong></h5>
                   <h6 class="card-subtitle mb-2 text-muted"> <?php echo $chamado->categoria   ?></h6>
                   <p class="card-text"><?php echo $chamado->descricao;  ?></p>
 
